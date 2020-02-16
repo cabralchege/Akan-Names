@@ -12,6 +12,7 @@
     <body>
         <div class="container-fluid">
           <div class="jumbotron" style="background-image: url(https://bit.ly/3byvPdb);">
+            <div class="row" id="spacer"></div>
             <div class="row">
 
 
@@ -28,17 +29,28 @@
           <h2>Fill in the form to generate your Akan Name</h2>
         
          <form class="text" style="text-align: center;">
+          <label>Century</label>
+          <input type="text" id="Century" value="" placeholder="Enter Century" maxlength="3" max="100"><br>
           
-            <br><label>date</label><input date ="day" type="number" id="day"></br>
-            <br><label>month</label><input month ="month" type="number" id="month"></br>
-            <br><label>year</label><input year ="year" type="number" id="year"></br>
-            <br><input type="radio" name="gender" value="male" checked> Male</br>
-            <br><input type="radio" name="gender" value="female" checked> Female</br>
+          <label>Year</label>
+          <input  type="number" id="Year" value="" placeholder="Enter Year" maxlength="4"><br>
+          
+          <label>Month</label>
+          <input type="number" id="Month" value="" placeholder="Enter Month" max="12" maxlength="2"><br>
+          
+          <label>Date</label>
+          <input type="number" id="Day" value="" placeholder="Enter Date" maxlength="2" max="31"><br>
+            
+           
+            <br>
+              <input type="radio" name="gender" value="male" checked> Male
+              <input type="radio" name="gender" value="female" checked> Female
+            </br>
             <button type="button">Submit</button>
           </form>
          </form>
         
-    </div> 
+        </div> 
     <script src="js/script.js"></script>
     </body>
     </html>
