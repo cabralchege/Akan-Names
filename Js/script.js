@@ -1,38 +1,35 @@
-var maleAkanNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]   
-var femaleAkanNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]
-var daysOfTheWeek = ["Sunday", "Monday","Tuesady", "Wednesday", "Thursday", "Friday", "Saturday"]     
+function getName(){
+    var year = document.getElementById("yob").value;
+    var month = document.getElementById("month").value;
+    var dayOfMonth = document.getElementById("day").value;
+    var date = new Date (`${year}-${month}-${dayOfMonth}`);
+    var birthDay = date.getDay();
+    var male = document.getElementById("male");
+    var female = document.getElementById("female");
+    var result = document.getElementById("result");
+    var days = ["Sunday", "Monday","Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var maleNames = ["Kwasi", "Kwadwo", "Kwaku", "Kwabena", "Yaw", "Kofi", "Kwame"];
+    var femaleNames = ["Akosua", "Adwoa", "Abenaa", "AKua", "Yaa", "Afua", "Ama"];
 
- 
-function outputName (){
-  var month=parseInt(document.getElementById("Month").value)
-  var day=parseInt(document.getElementById("Day").value)
-  var year=parseInt(document.getElementById("Year").value)
-  var gender =getYourGender();
-
-  var date =new Date(year +"/" + month + "/"+day);
-
-  var dayBorn = date.getYourDay();
-
-  var akanName;
-
-  if(gender ==="male"){
-      akanName = female[dayBorn]
-  }
-  else{
-      akanName = female[dayBorn]
-  }
-
-  alert("You were born on "+daysOfTheWeek[dayBorn]+ "your Akan Name is" +akanName);
-}
-
-function getYourGender(){
-    var gender = document.getElementsByName("gender");
-
-    for(i = 0; i < gender.length; i++){
-        if(gender[i].checked){
-            return(gender[i].value)
-        }
+    if (year == "" || year.length < 4 || year.length > 4){
+        alert("Hey you need to enter a valid year!");
     }
-
+    else if (month < 0 || month > 12 ){
+        alert("Hey you need to enter a valid month!");
+    }
+    else if( dayOfMonth < 0 || dayOfMonth >31) {
+        alert("Hey you need to re-enter a valid day!");
+    }
+    else if (male.checked == false && female.checked == false){
+        alert("You need to specify your gender!");
+    }
+    else if (male.checked == true){
+        result.innerHTML = "Hey " + maleNames[birthDay] +  ". Well, since you were born on a " + days[birthDay] + " that's your Ghanaian name.";
+    } 
+    else if (female.checked == true){
+        result.innerHTML = "Hey " + femaleNames[birthDay] +  ". Well, since you were born on a " + days[birthDay] + " that's your Ghanaian name.";
+    }
+    else{
+        alert("Come on Akan, just run!")
+    }
 }
- 
