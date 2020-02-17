@@ -1,57 +1,59 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title class="title">Akan Name Generator</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
-    <body>
-        <div class="container-fluid">
-          <div class="jumbotron" style="background-image: url(https://bit.ly/3byvPdb);">
-            <div class="row" id="spacer"></div>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Akan names</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row jumbotron">
+            <h1>Akan Name Generator</h1>
+        </div>
+        <div class="jumbotron">
             <div class="row">
-
-
-        <h1>Akan Name Generator </h1>
-         
-          <p>
-              In the Ghanian culture children are given their first names 
-              depending on their gender and the day of the week they were born.
-              These are called Akan Names. 
-         </p>
-
+                <div class="col-sm-12 col-md-12">
+                    
+                        <p>In Ghanian culture when children are born they are given their first names
+                          in accordance with the day of the week they were born and their gender.
+                        </p>
+                    
+                </div>
             </div>
-          </div>
-          <h2>Fill in the form to generate your Akan Name</h2>
-        
-         <form onsubmit="event.preventDefault()" class="text" style="text-align: center;">
-          <label>Century</label>
-          <input type="text" id="Century" value="" placeholder="Enter Century" maxlength="3" max="100" min="1" minlength="1"><br>
-          
-          <label>Year</label>
-          <input  type="text" id="Year" value="" placeholder="Enter Year" maxlength="4" min="1" minlength="1"><br>
-          
-          <label>Month</label>
-          <input type="text" id="Month" value="" placeholder="Enter Month" max="12" maxlength="2" min="1" minlength="1"><br>
-          
-          <label>Date</label>
-          <input type="text" id="Day" value="" placeholder="Enter Date" maxlength="2" max="31" min="1" minlength="1"><br>
-            
-           
-            <br>
-              <input type="radio" name="gender" value="male" checked> Male<br>
-              <input type="radio" name="gender" value="female" checked> Female<br>
-            </br>
-
-            <input type="button" value="GenerateName" onclick="outputName ()">
-          </form>
-        </div> 
-        <p id="results">....</p>
-    <script src="js/script.js"></script>
-    </body>
-    </html>
-      
+            <div class="row">
+                <div class="col-sm-4 col-md-4">
+                    <form>
+                        <div class="resulted">
+                            <p id="result"></p>
+                        </div>
+                        <div>
+                            <input type="number" id="yob" placeholder="Year" required>
+                        </div>
+                        <div>
+                            <input type="number" id="month" placeholder="Month" required >
+                        </div>
+                        <div>
+                            <input type="number" id="day" placeholder="Day of the week" required >
+                        </div>
+                        <div id="gend"  class="checkbox">
+                            Male<input type="radio" value="male" id="male" name="gender">
+                            Female<input type="radio" value="female" id="female" name="gender">
+                        </div>
+                        <div>
+                            <input type="button" value="Find out" onclick="getName();" class="btn btn-primary">
+                            <input type="reset" value="Reset">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-8 col-md-8 img-responsive img-rounded">
+                    <img src="images/image.png" alt="Ghana's heritage">
+                </div>
+            </div> 
+        </div>
+    </div>
+    <script src="Js/script.js"></script>
+</body>
+</html>
