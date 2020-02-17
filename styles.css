@@ -2,11 +2,7 @@ body{
     background-image: url(https://bit.ly/2SOA8bL);
 }
 
-h1{
-    text-align: center;
-    text-emphasis: bold;
-    font-size: xx-large;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+#heading{text-align: center;
 }
 
 img{
