@@ -24,12 +24,12 @@ function getName(){
         alert("You need to specify your gender!");
     }
     else if (male.checked == true){
-        result.innerHTML = "Hey " + maleNames[birthDay] +  ". Well, since you were born on a " + days[birthDay] + " that's your Ghanaian name.";
+        result.innerHTML = "Your Akan Name is " + maleNames[birthDay] +  ".  You were born on a " + days[birthDay] ;
     } 
     else if (female.checked == true){
-        result.innerHTML = "Hey " + femaleNames[birthDay] +  ". Well, since you were born on a " + days[birthDay] + " that's your Ghanaian name.";
+        result.innerHTML = "Your Akan Name is " + femaleNames[birthDay] +  ".  You were born on a " + days[birthDay] ;
     }
     else{
-        alert("Come on Akan, just run!")
+        alert("Akan Name Generator has an error!")
     }
 }
