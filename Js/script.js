@@ -12,13 +12,13 @@ function getName(){
     var femaleNames = ["Akosua", "Adwoa", "Abenaa", "AKua", "Yaa", "Afua", "Ama"];
 
     if (year == "" || year.length < 4 || year.length > 4){
-        alert("Hey you need to enter a valid year!");
+        alert("Please  enter a valid year!");
     }
     else if (month < 0 || month > 12 ){
-        alert("Hey you need to enter a valid month!");
+        alert("Please enter a valid month!");
     }
     else if( dayOfMonth < 0 || dayOfMonth >31) {
-        alert("Hey you need to re-enter a valid day!");
+        alert("Please re-enter a valid day!");
     }
     else if (male.checked == false && female.checked == false){
         alert("You need to specify your gender!");
